@@ -20,9 +20,15 @@ struct RootView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 8) {
                     ForEach(Array(notes.enumerated()), id: \.offset) { index, note in
-                        Text(note)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .accessibilityIdentifier("note-\(index)")
+                        HStack {
+                            Text(note)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .accessibilityIdentifier("note-\(index)")
+                            Button("Delete") {
+                                notes.remove(at: index)
+                            }
+                            .accessibilityIdentifier("delete-\(index)")
+                        }
                     }
                 }
             }
