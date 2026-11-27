@@ -1,0 +1,89 @@
+{
+  "title": "Delete notes",
+  "scenarios": [
+    {
+      "name": "Delete middle note",
+      "lines": [
+        17,
+        23
+      ],
+      "steps": [
+        {
+          "id": "note-input",
+          "op": "type",
+          "text": "A"
+        },
+        {
+          "id": "add-button",
+          "op": "tap"
+        },
+        {
+          "id": "note-input",
+          "op": "type",
+          "text": "B"
+        },
+        {
+          "id": "add-button",
+          "op": "tap"
+        },
+        {
+          "id": "note-input",
+          "op": "type",
+          "text": "C"
+        },
+        {
+          "id": "add-button",
+          "op": "tap"
+        },
+        {
+          "id": "delete-1",
+          "op": "tap"
+        },
+        {
+          "id": "note-0",
+          "op": "shows",
+          "text": "C"
+        },
+        {
+          "id": "note-1",
+          "op": "shows",
+          "text": "A"
+        },
+        {
+          "id": "note-2",
+          "op": "gone"
+        }
+      ]
+    },
+    {
+      "name": "Delete only note",
+      "lines": [
+        17,
+        23
+      ],
+      "steps": [
+        {
+          "id": "note-input",
+          "op": "type",
+          "text": "Solo"
+        },
+        {
+          "id": "add-button",
+          "op": "tap"
+        },
+        {
+          "id": "delete-0",
+          "op": "tap"
+        },
+        {
+          "id": "note-0",
+          "op": "gone"
+        },
+        {
+          "id": "delete-0",
+          "op": "gone"
+        }
+      ]
+    }
+  ]
+}
