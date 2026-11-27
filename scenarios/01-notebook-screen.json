@@ -1,0 +1,106 @@
+{
+  "title": "Notebook screen",
+  "scenarios": [
+    {
+      "name": "Fresh notebook",
+      "lines": [
+        14,
+        16,
+        18,
+        25
+      ],
+      "steps": [
+        {
+          "id": "note-input",
+          "op": "exists"
+        },
+        {
+          "id": "add-button",
+          "op": "exists"
+        },
+        {
+          "id": "note-0",
+          "op": "gone"
+        },
+        {
+          "id": "price",
+          "op": "shows",
+          "text": "$12.50"
+        }
+      ]
+    },
+    {
+      "name": "Add a note",
+      "lines": [
+        16,
+        22
+      ],
+      "steps": [
+        {
+          "id": "note-input",
+          "op": "type",
+          "text": "Buy milk"
+        },
+        {
+          "id": "add-button",
+          "op": "tap"
+        },
+        {
+          "id": "note-0",
+          "op": "shows",
+          "text": "Buy milk"
+        },
+        {
+          "id": "note-input",
+          "op": "shows",
+          "text": ""
+        },
+        {
+          "id": "note-1",
+          "op": "gone"
+        }
+      ]
+    },
+    {
+      "name": "Newest first",
+      "lines": [
+        17,
+        22
+      ],
+      "steps": [
+        {
+          "id": "note-input",
+          "op": "type",
+          "text": "First"
+        },
+        {
+          "id": "add-button",
+          "op": "tap"
+        },
+        {
+          "id": "note-input",
+          "op": "type",
+          "text": "Second"
+        },
+        {
+          "id": "add-button",
+          "op": "tap"
+        },
+        {
+          "id": "note-0",
+          "op": "shows",
+          "text": "Second"
+        },
+        {
+          "id": "note-1",
+          "op": "shows",
+          "text": "First"
+        },
+        {
+          "id": "note-2",
+          "op": "gone"
+        }
+      ]
+    }
+  ]
+}
